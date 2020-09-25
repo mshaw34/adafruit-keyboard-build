@@ -3,31 +3,25 @@ input.onGesture(Gesture.Shake, function () {
 })
 forever(function () {
     if (input.buttonA.isPressed()) {
-        keyboard.key("a", KeyboardKeyEvent.Down)
         pause(100)
         light.showRing(
         `red red red red red white white white white white`
         )
+        keyboard.key("a", KeyboardKeyEvent.Down)
     }
     if (input.buttonB.isPressed()) {
-        keyboard.key("d", KeyboardKeyEvent.Down)
         pause(100)
         light.showRing(
         `white white white white white red red red red red`
         )
+        keyboard.key("d", KeyboardKeyEvent.Down)
     }
     if (!(input.buttonA.isPressed())) {
         keyboard.key("a", KeyboardKeyEvent.Up)
         pause(100)
-        light.showRing(
-        `green green green green green white white white white white`
-        )
     }
     if (!(input.buttonB.isPressed())) {
         keyboard.key("d", KeyboardKeyEvent.Up)
         pause(100)
-        light.showRing(
-        `white white white white white green green green green green`
-        )
     }
 })
