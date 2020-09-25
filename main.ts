@@ -1,22 +1,13 @@
 input.buttonA.onEvent(ButtonEvent.Down, function () {
-    pause(100)
-    keyboard.key("a", KeyboardKeyEvent.Down)
+    pause(50)
+    makerController.player1.press(ArcadeButton.A)
 })
 input.buttonB.onEvent(ButtonEvent.Down, function () {
-    pause(100)
-    keyboard.key("d", KeyboardKeyEvent.Down)
-})
-input.buttonA.onEvent(ButtonEvent.Up, function () {
-    pause(100)
-    keyboard.key("a", KeyboardKeyEvent.Up)
+    pause(50)
+    makerController.player1.press(ArcadeButton.B)
 })
 input.onGesture(Gesture.Shake, function () {
-    keyboard.key("w", KeyboardKeyEvent.Press)
+    makerController.player1.press(ArcadeButton.Up)
     music.pewPew.play()
-    pause(100)
-    keyboard.key("w", KeyboardKeyEvent.Up)
-})
-input.buttonB.onEvent(ButtonEvent.Up, function () {
-    pause(100)
-    keyboard.key("d", KeyboardKeyEvent.Up)
+    pause(200)
 })
