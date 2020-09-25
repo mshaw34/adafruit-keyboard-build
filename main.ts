@@ -11,8 +11,7 @@ input.buttonA.onEvent(ButtonEvent.Up, function () {
     keyboard.key("a", KeyboardKeyEvent.Up)
 })
 input.onGesture(Gesture.Shake, function () {
-    pause(100)
-    keyboard.key("w", KeyboardKeyEvent.Press)
+    makerController.player1.press(ArcadeButton.Up)
 })
 input.buttonB.onEvent(ButtonEvent.Up, function () {
     pause(100)
